@@ -10,11 +10,14 @@ The following command is supported:
 -- logout
 /logout
 
+-- disconnect
+/disconnect
+
 -- Send message to someone
 /tell <name> <message>
 
 -- kick someone from server
-/kick <name>
+/kick <name> <message>
 
 -- Broadcast message across server
 <message>

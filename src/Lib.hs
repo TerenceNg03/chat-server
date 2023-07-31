@@ -20,4 +20,4 @@ runServer port = do
         (sock', addr) <- accept sock
         putStrLn $ format "Accepted connection : {}" (show addr)
         handle <- socketToHandle sock' ReadWriteMode
-        forkFinally (talk handle server) (const $ hClose handle)
+        forkFinally (talk handle server addr) (const $ hClose handle)
