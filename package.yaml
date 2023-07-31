@@ -25,6 +25,10 @@ dependencies:
 - fmt
 - stm
 - async
+- text
+- optics
+- containers
+- uuid
 
 ghc-options:
 - -Wall

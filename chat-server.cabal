@@ -25,7 +25,10 @@ source-repository head
 
 library
   exposed-modules:
+      Client
       Lib
+      Message
+      Server
   other-modules:
       Paths_chat_server
   hs-source-dirs:
@@ -34,9 +37,13 @@ library
   build-depends:
       async
     , base >=4.7 && <5
+    , containers
     , fmt
     , network
+    , optics
     , stm
+    , text
+    , uuid
   default-language: Haskell2010
 
 executable chat-server-exe
@@ -50,9 +57,13 @@ executable chat-server-exe
       async
     , base >=4.7 && <5
     , chat-server
+    , containers
     , fmt
     , network
+    , optics
     , stm
+    , text
+    , uuid
   default-language: Haskell2010
 
 test-suite chat-server-test
@@ -67,7 +78,11 @@ test-suite chat-server-test
       async
     , base >=4.7 && <5
     , chat-server
+    , containers
     , fmt
     , network
+    , optics
     , stm
+    , text
+    , uuid
   default-language: Haskell2010
